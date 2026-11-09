@@ -232,6 +232,54 @@ pre.code .l::before{counter-increment:ln;content:counter(ln);display:inline-bloc
 pre.code .l.sec{position:relative}
 .seccopy{margin-left:14px;font:600 11px var(--font-body);background:var(--t-chip-2);border:1px solid var(--t-chip-line);color:var(--term-ink);border-radius:5px;padding:1px 8px;cursor:pointer;font-style:normal;vertical-align:1px}
 .seccopy:hover{border-color:var(--accent);color:#fff}
+pre.code .l.sec{background:#1e1617}
+pre.code .l.sec .c{color:#fff;font-weight:600;font-style:normal}
+/* Script: indice sezioni */
+.pane.sxp{overflow:hidden;container-type:inline-size}
+.pane.sxp:not([hidden]){display:flex}
+.sx{display:flex;flex:1;min-height:0;width:100%}
+.sxnav{width:214px;flex:none;background:#17171a;border-right:1px solid var(--term-line);overflow:auto;padding:12px 8px;display:flex;flex-direction:column;gap:2px}
+.sxnav h4{margin:0;padding:0 10px 8px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#a0a0a7;display:flex}
+.sxnav h4 span{margin-left:auto;font-family:var(--font-mono);letter-spacing:0}
+.sxit{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:0;border-radius:7px;padding:7px 10px;cursor:pointer;font:500 12.5px var(--font-body);color:#c4c4c9;flex:none}
+.sxit:hover{background:#222226;color:#fff}
+.sxit[aria-current="true"]{background:#3a1c1a;color:#fff;font-weight:600}
+.sxit .nr{font-family:var(--font-mono);font-size:11px;color:#8a8a91;width:18px;flex:none}
+.sxit[aria-current="true"] .nr{color:var(--term-key)}
+.sxit .lbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.sxit .cnt{margin-left:auto;font-family:var(--font-mono);font-size:11px;color:#8a8a91;flex:none}
+.sxit.all{margin-bottom:6px}
+.sxmain{flex:1;min-width:0;display:flex;flex-direction:column}
+.sxhead{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--term-line)}
+.sxhead>div{min-width:0;flex:1}
+.sxt{font-size:15px;font-weight:700;color:#fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sxbody{flex:1;overflow:auto;min-height:0;display:flex;flex-direction:column}
+.edwrap{position:relative;width:max-content;min-width:100%;flex:none}
+.edwrap[hidden]{display:none}
+.edta{position:absolute;inset:0;width:100%;height:100%;margin:0;border:0;outline:none;resize:none;overflow:hidden;background:transparent;color:transparent;-webkit-text-fill-color:transparent;caret-color:#fff;font-family:var(--font-mono);font-size:12.8px;font-weight:400;line-height:1.6;letter-spacing:normal;padding:14px 16px 20px 4.7em;white-space:pre;tab-size:4}
+.edta.skip1{padding-top:calc(14px + 1.6em)}
+.edta::selection{background:rgba(239,59,45,.38)}
+.edta[readonly]{caret-color:transparent;cursor:default}
+.edwrap:focus-within{box-shadow:inset 3px 0 0 var(--accent)}
+.sxwarn{display:flex;align-items:center;gap:8px 10px;flex-wrap:wrap;padding:10px 16px;background:#2b220c;border-bottom:1px solid #4a3a12;color:#f5d58d;font-size:12.5px}
+.sxwarn[hidden]{display:none}
+.sxwarn span{flex:1;min-width:200px}
+.mdot{width:7px;height:7px;border-radius:50%;background:#f5c66d;flex:none;margin-left:auto}
+.mdot.err{background:#ff6f61}
+.mdot+.cnt{margin-left:0}
+.sxedit{flex:1;display:flex;flex-direction:column;gap:10px;padding:14px 16px;min-height:0}
+.sxedit[hidden]{display:none}
+.sxedrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12.5px;color:#c4c4c9}
+.sxedrow select{background:#1f1f23;color:var(--term-ink);border:1px solid #3a3a40;border-radius:7px;padding:6px 10px;font:500 12.5px var(--font-body)}
+#cliText{flex:1;min-height:260px;resize:vertical;background:#0b0b0c;color:var(--term-ink);border:1px solid #3a3a40;border-radius:9px;padding:12px 14px;font:13px/1.6 var(--font-mono);tab-size:4;outline:none;white-space:pre;overflow:auto}
+#cliText:focus{border-color:var(--accent)}
+#cliText::placeholder{color:#6a6a72}
+.sxit.add{margin-top:8px;border:1px dashed #3a3a40;color:#e4e4e6}
+.sxit.add .nr{color:var(--term-key)}
+.sxfoot{display:flex;align-items:center;gap:8px;padding:10px 16px;border-top:1px solid var(--term-line);background:#17171a}
+.sxfoot .meta-line{flex:1;text-align:center;font-family:var(--font-body)}
+.sxfoot .tbtn:disabled{opacity:.4;cursor:default}
+@container (max-width:620px){.sx{flex-direction:column}.sxnav{width:auto;flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--term-line);padding:8px}.sxnav h4{display:none}.sxit{width:auto}.sxit .cnt{display:none}.sxit.all{margin-bottom:0}.sxfoot .meta-line{display:none}.sxfoot{justify-content:space-between}}
 pre.code .k{color:var(--term-key);font-weight:500} pre.code .p{color:var(--term-param)} pre.code .s{color:var(--term-str)} pre.code .c{color:var(--term-muted);font-style:italic}
 .doc{padding:16px 20px;font-size:13.5px;display:flex;flex-direction:column;gap:16px}
 .doc h3{font-size:12px;color:var(--term-key);font-weight:700;text-transform:uppercase;letter-spacing:.09em}
@@ -343,7 +391,22 @@ pre.code .k{color:var(--term-key);font-weight:500} pre.code .p{color:var(--term-
       </div>
       <div class="outact" id="outact"></div>
     </div>
-    <div class="pane" id="pane-script"><pre class="code" id="code"></pre></div>
+    <div class="pane sxp" id="pane-script">
+      <div class="sx">
+        <nav class="sxnav" id="sxnav" aria-label="Sezioni dello script"></nav>
+        <div class="sxmain">
+          <div class="sxhead"><div><div class="sxt" id="sxt"></div><div class="meta-line" id="sxm"></div></div><button type="button" class="tbtn" id="sxreset" hidden>Ripristina</button><button type="button" class="tbtn go" id="sxcopy">Copia sezione</button></div>
+          <div class="sxwarn" id="sxwarn" hidden></div>
+          <div class="sxbody" id="sxbody"><div class="edwrap" id="edwrap"><pre class="code" id="code" aria-hidden="true"></pre><textarea class="edta" id="edta" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" wrap="off"></textarea></div>
+            <div class="sxedit" id="sxedit" hidden>
+              <div class="sxedrow"><label for="cliPos">Dove inserirli nello script</label><select id="cliPos"><option value="start">Dopo sistema e amministratori</option><option value="prepol">Prima delle policy</option><option value="end">Alla fine (prima dell'HA)</option></select></div>
+              <textarea id="cliText" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" aria-label="Comandi CLI personalizzati" placeholder="Scrivi qui i comandi come li daresti in CLI, per esempio:&#10;&#10;config system settings&#10;    set gui-multiple-interface-policy enable&#10;end"></textarea>
+            </div>
+          </div>
+          <div class="sxfoot"><button type="button" class="tbtn" id="sxprev">‹ Precedente</button><span class="meta-line" id="sxhint"></span><button type="button" class="tbtn" id="sxnext">Successiva ›</button></div>
+        </div>
+      </div>
+    </div>
     <div class="pane" id="pane-check" hidden><div class="doc" id="check"></div></div>
     <div class="pane" id="pane-sum" hidden><div class="doc" id="sum"></div></div>
     <div class="pane" id="pane-doc" hidden><div class="paperwrap"><div class="paper" id="docv"></div></div></div>
@@ -417,12 +480,14 @@ function blank(){
     nets:[Object.assign(blankNet(),{name:'LAN',port:'internal1',ip:'192.168.1.1/24',access:'ping https ssh',dhcp:{on:true,start:'192.168.1.100',end:'192.168.1.200',dns:'default',dns1:'',lease:86400}})],
     ha:{on:false,mode:'a-p',group:'',gid:10,hapwd:'',prio:200,prio2:100,override:false,hbdev:'',pickup:true,monitor:'',mgmt:false,mgmtIf:'',mgmtGw:'',host2:''},
     routes:[],admins:[blankAdmin()],policies:[],vips:[],addrs:[],agroups:[],users:[],ugroups:[],vpns:[],
-    opts:{comments:true,dhcpBase:10,compact:false}
+    opts:{comments:true,dhcpBase:10,compact:false},
+    cli:{text:'',pos:'end'},
+    edits:{}
   };
 }
 function normalize(S){
   const B=blank();const out=Object.assign({},B,S||{});
-  for(const k of ['meta','system','hwswitch','sdwan','utm','opts','ha'])out[k]=Object.assign({},B[k],(S&&S[k])||{});
+  for(const k of ['meta','system','hwswitch','sdwan','utm','opts','ha','cli'])out[k]=Object.assign({},B[k],(S&&S[k])||{});
   out.wans=(Array.isArray(S&&S.wans)?S.wans:B.wans).map(w=>Object.assign(blankWan(),w));
   out.nets=(Array.isArray(S&&S.nets)?S.nets:B.nets).map(n=>{const b=blankNet();const r=Object.assign(b,n);r.dhcp=Object.assign(blankNet().dhcp,n.dhcp||{});r.res=Array.isArray(n.res)?n.res.map(x=>Object.assign({ip:'',mac:'',desc:''},x)):[];return r;});
   out.policies=(Array.isArray(S&&S.policies)?S.policies:[]).map(p=>Object.assign(blankPolicy(),p));
@@ -432,6 +497,7 @@ function normalize(S){
   out.addrs=arr('addrs').map(a=>Object.assign(blankAddr(),a));
   out.agroups=arr('agroups').map(g=>Object.assign(blankAgrp(),g,{members:mem(g.members)}));
   out.routes=(Array.isArray(S&&S.routes)?S.routes:[]).map(r=>Object.assign(blankRoute(),r));
+  out.edits={};{const e=S&&S.edits;if(e&&typeof e==='object')for(const k of Object.keys(e)){const v=e[k];if(v&&typeof v.text==='string'&&typeof v.base==='string')out.edits[k]={base:v.base,text:v.text};}}
   out.admins=(Array.isArray(S&&S.admins)?S.admins:[blankAdmin()]).map(a=>Object.assign(blankAdmin(),a));
   out.users=arr('users').map(u=>Object.assign(blankUser(),u));
   out.ugroups=arr('ugroups').map(g=>Object.assign(blankUgrp(),g,{members:mem(g.members)}));
@@ -524,6 +590,58 @@ function netIf(n){return n.vlan!==''&&n.vlan!==null&&n.vlan!==undefined?String(n
 function isVlan(n){return n.vlan!==''&&n.vlan!==null&&n.vlan!==undefined;}
 function addrName(n){return 'NET_'+String(n.name);}
 
+/* ---------- Modifiche manuali allo script ---------- */
+const SECRET_RE=/^(\s*set\s+(password|passwd|psksecret)\s+).*$/,SECRET_TOK='__SEGRETO__';
+function maskSec(t){return String(t).split('\n').map(l=>l.replace(SECRET_RE,'$1'+SECRET_TOK)).join('\n');}
+function trimB(a){a=a.slice();while(a.length&&!a[a.length-1].trim())a.pop();while(a.length&&!a[0].trim())a.shift();return a;}
+function splitBlocks(lines){
+  const out=[{key:'__pre__',header:null,body:[]}],seen={};
+  lines.forEach(l=>{const m=/^# \d+\. (.*)$/.exec(l);if(m){let k=m[1].trim();if(seen[k]){seen[k]++;k=k+' #'+seen[k];}else seen[k]=1;out.push({key:k,header:l,body:[]});}else out[out.length-1].body.push(l);});
+  out.forEach(b=>{b.body=trimB(b.body);});return out;
+}
+function joinBlocks(bl){const o=[];bl.forEach(b=>{if(b.header){if(o.length)o.push('');o.push(b.header);}o.push(...b.body);});return o;}
+function fillSecrets(text,gen){
+  const pool={};String(gen).split('\n').forEach(l=>{const m=SECRET_RE.exec(l);if(m)(pool[m[2]]=pool[m[2]]||[]).push(l.replace(/^\s*set\s+\S+\s+/,''));});
+  const cnt={};let missing=false;
+  const out=String(text).split('\n').map(l=>{const m=SECRET_RE.exec(l);if(!m)return l;const k=m[2],i=cnt[k]=(cnt[k]||0)+1;if(l.indexOf(SECRET_TOK)<0)return l;const v=(pool[k]||[])[i-1];if(v==null){missing=true;return l;}return m[1]+v;});
+  return {text:out.join('\n'),missing};
+}
+function checkCli(lines,label,W,sec,path){
+  const kw=lines.map(l=>l.trim().split(/\s+/)[0]);
+  const opens=kw.filter(k=>k==='config').length,closes=kw.filter(k=>k==='end').length;
+  if(opens!==closes)W(sec,path,label+': '+opens+' config e '+closes+' end, controlla che ogni blocco sia chiuso.');
+  if(lines.some(l=>/[^\x20-\x7E]/.test(l)))W(sec,path,label+': ci sono lettere accentate o simboli speciali, in seriale possono rompere la riga.');
+  if(lines.some(l=>/^\s*#/.test(l)&&/['"`]/.test(l)))W(sec,path,label+': nei commenti (#) evita apostrofi e virgolette, la CLI li legge come stringhe e resta bloccata.');
+  if(lines.some(l=>/^\s*execute\s+(reboot|factoryreset|shutdown|restore)/.test(l)))W(sec,path,label+': contiene un execute che riavvia o resetta il firewall, il resto dello script non verrebbe applicato.');
+}
+function applyEdits(L,edits,W,E){
+  const blocks=splitBlocks(L),genAll=joinBlocks(blocks).join('\n');
+  const info={secs:{},order:blocks.map(b=>b.key),genAll,all:false,allConflict:false,orphans:[]};
+  blocks.forEach(b=>{info.secs[b.key]={gen:b.body.join('\n'),edited:false,conflict:false};});
+  const keys=Object.keys(edits||{});
+  if(!keys.length)return {lines:L,info};
+  if(edits.__all__){
+    const e=edits.__all__;info.all=true;info.allConflict=maskSec(genAll)!==maskSec(e.base);
+    if(info.allConflict)W('edit','edit:__all__','Hai modificato lo script intero e poi il form è cambiato: controlla lo script o ripristinalo dal form.');
+    const f=fillSecrets(e.text,genAll);
+    if(f.missing)E('edit','edit:__all__','Nello script modificato a mano manca una password (le password non vengono salvate): reinseriscila al posto di '+SECRET_TOK+'.');
+    const out=f.text.split('\n');checkCli(out.filter(l=>!/^# /.test(l)),'Script modificato a mano',W,'edit','edit:__all__');
+    return {lines:out,info};
+  }
+  keys.forEach(k=>{
+    const e=edits[k],b=blocks.find(x=>x.key===k);
+    if(!b){info.orphans.push(k);W('edit','edit:'+k,'La modifica a mano di "'+k+'" non è applicata: la sezione non c\'è più nello script.');return;}
+    const si=info.secs[k];si.edited=true;
+    if(maskSec(si.gen)!==maskSec(e.base)){si.conflict=true;W('edit','edit:'+k,'"'+k+'": il form ha cambiato questa sezione dopo la tua modifica a mano, scegli quale versione tenere.');}
+    const f=fillSecrets(e.text,si.gen);
+    if(f.missing)E('edit','edit:'+k,'"'+k+'": manca una password tolta dal salvataggio, reinseriscila al posto di '+SECRET_TOK+'.');
+    b.body=trimB(f.text.split('\n'));
+    const ref=new Set(si.gen.split('\n'));const changedL=b.body.filter(l=>!ref.has(l));
+    if(changedL.length)checkCli(b.header?b.body:changedL,'"'+(k==='__pre__'?'Intestazione':k)+'" modificata a mano',W,'edit','edit:'+k);
+  });
+  return {lines:joinBlocks(blocks),info};
+}
+
 function generate(S){
   const issues=[];const L=[];
   const E=(sec,path,msg)=>issues.push({lvl:'err',sec,path,msg});
@@ -532,6 +650,12 @@ function generate(S){
   let secN=0;const cm=t=>{if(C){if(L.length)L.push('');L.push('# '+(++secN)+'. '+safeC(t.replace(/^\d+[a-z]?\.\s*/,'')));}};
   const I1='    ',I2=I1+I1,I3=I2+I1,I4=I3+I1;
   const sys=S.system,sw=S.hwswitch,sd=S.sdwan,utm=S.utm;
+  /* Comandi CLI personalizzati */
+  const cliRaw=String((S.cli&&S.cli.text)||'').replace(/\r/g,'').replace(/\t/g,I1).split('\n').map(l=>l.replace(/\s+$/,''));
+  while(cliRaw.length&&!cliRaw[0].trim())cliRaw.shift();while(cliRaw.length&&!cliRaw[cliRaw.length-1].trim())cliRaw.pop();
+  const cliPos=['start','prepol','end'].includes(S.cli&&S.cli.pos)?S.cli.pos:'end';
+  if(cliRaw.length)checkCli(cliRaw,'Comandi personalizzati',W,'cli','cli.text');
+  const cliOut=k=>{if(cliPos!==k||!cliRaw.length)return;cm('Comandi personalizzati');L.push(...cliRaw);};
 
   /* ---------- Controlli ---------- */
   if(!String(sys.hostname).trim())E('sys','system.hostname','Hostname mancante.');
@@ -971,6 +1095,7 @@ function generate(S){
     L.push('end');
   }
 
+  cliOut('start');
   if(sw.remove&&sw.name){
     cm('2. Rimozione hardware switch "'+sw.name+'": prima i riferimenti, poi lo switch');
     const dids=words(sw.dhcpIds),pids=words(sw.policyIds);
@@ -1264,6 +1389,7 @@ function generate(S){
     const b=[I2+'set name '+q(nm),I2+'set srcintf '+q(netIf(n)),I2+'set dstintf '+q(zone),I2+'set action accept',I2+'set srcaddr '+q(addrName(n)),I2+'set dstaddr "all"',I2+'set schedule "always"',I2+'set service "ALL"',...utmLines(I2),I2+'set logtraffic all',I2+'set nat enable'];
     pols.push({kind:'net',name:nm,b});
   });
+  cliOut('prepol');
   if(pols.length){
     cm('Policy firewall (prima le personalizzate, poi port forwarding e VPN, poi uscita Internet)');
     L.push('config firewall policy');
@@ -1277,6 +1403,7 @@ function generate(S){
     if(ha.mgmt&&ha.mgmtIf){b.push(I1+'set ha-mgmt-status enable',I1+'config ha-mgmt-interfaces',I2+'edit 1',I3+'set interface '+q(ha.mgmtIf));if(ha.mgmtGw)b.push(I3+'set gateway '+ha.mgmtGw);b.push(I2+'next',I1+'end');}
     b.push('end');return b;
   };
+  cliOut('end');
   if(haOk){
     cm('Alta affidabilita (HA): sempre per ultimo, il firewall rinegozia il cluster');
     L.push(...haBlock(ha.prio));
@@ -1325,6 +1452,7 @@ function generate(S){
     post.push({t:'HA: controlla che il cluster sia formato e i due firewall sincronizzati.',c:'get system ha status'});
     post.push({t:'HA: verifica che la configurazione sia identica sui due firewall.',c:'diagnose sys ha checksum cluster'});
   }
+  if(cliRaw.length)post.push({t:'Controlla che i comandi personalizzati siano passati senza Command fail o entry not found.'});
   post.push({t:'Salva il backup finale della configurazione e allegalo alla documentazione del cliente.'});
 
   /* ---------- Riepilogo ---------- */
@@ -1347,8 +1475,10 @@ function generate(S){
     cred:[...okAdmins.map(({a})=>({k:'Admin '+a.name,v:a.pwd})),...okUsers.map(u=>({k:'Utente '+u.name,v:u.pwd})),...okVpns.map(x=>({k:'PSK '+x.v.name,v:x.v.psk}))]
   };
 
-  const outL=S.opts.compact?L.map(l=>l.trim()).filter(Boolean):L;
-  return {script:outL.join('\n')+'\n',issues,checklist:{pre,post},sum,stats:{lines:L.length,policies:pols.length,os:OS}};
+  const ed=applyEdits(L,S.edits,W,E),FL=ed.lines;
+  if(Object.keys(S.edits||{}).length)post.splice(post.length-1,0,{t:'Hai modificato lo script a mano: controlla che quelle righe siano passate senza Command fail.'});
+  const outL=S.opts.compact?FL.map(l=>l.trim()).filter(Boolean):FL;
+  return {script:outL.join('\n')+'\n',lines:FL,edit:ed.info,issues,checklist:{pre,post},sum,stats:{lines:FL.length,policies:pols.length,os:OS}};
 }
 /*CORE-END*/
 
@@ -1358,7 +1488,7 @@ const SECRET=new Set(['pwd','psk','hapwd']);
 const KA='fgtgen.v1.adminDefault';
 function adminDefault(){try{return localStorage.getItem(KA)||'';}catch(e){return '';}}
 function withAdmin(S){const d=adminDefault();if(!S.admins.length)S.admins.push(blankAdmin());if(d&&!S.admins[0].name)S.admins[0].name=d;return S;}
-function persist(S){return JSON.stringify(S,(k,v)=>SECRET.has(k)?'':v);}
+function persist(S){return JSON.stringify(S,function(k,v){if(SECRET.has(k))return '';if(k==='edits'&&v&&typeof v==='object'&&this===S){const o={};for(const x of Object.keys(v))o[x]={base:maskSec(v[x].base),text:maskSec(v[x].text)};return o;}return v;});}
 const store={get(k){try{return localStorage.getItem(k);}catch(e){return null;}},set(k,v){try{localStorage.setItem(k,v);return true;}catch(e){return false;}}};
 const framed=(()=>{try{return window.self!==window.top;}catch(e){return true;}})();
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -1719,10 +1849,11 @@ function renderOutput(){
   $('#status').innerHTML=`${errs?`<span class="pill err">${errs} ${errs===1?'errore':'errori'}</span>`:'<span class="pill ok">Nessun errore</span>'}${warns?`<span class="pill warn">${warns} ${warns===1?'avviso':'avvisi'}</span>`:''}<span class="meta-line">${result.stats.lines} righe · ${result.stats.policies} policy · FortiOS ${result.stats.os}</span>`;
   $('#fname').textContent=fileBase()+'.txt';const ob=$('#osBadge');if(ob)ob.textContent=result.stats.os;
   $('#issN').textContent=result.issues.length?result.issues.length:'';
-  const SL=result.script.replace(/\n$/,'').split('\n');secTexts=[];let cur=-1;
-  SL.forEach(l=>{if(/^# \d+\. /.test(l)){secTexts.push([l]);cur=secTexts.length-1;}else if(cur>=0)secTexts[cur].push(l);});
-  let si=-1;
-  $('#code').innerHTML=SL.map(l=>{if(/^# \d+\. /.test(l)){si++;return `<span class="l sec">${hl(l)}<button type="button" class="seccopy" data-sec="${si}">Copia sezione</button></span>`;}return `<span class="l">${hl(l)||' '}</span>`;}).join('');
+  allLines=result.lines.slice();while(allLines.length&&!allLines[allLines.length-1].trim())allLines.pop();
+  {const BL=splitBlocks(allLines);secTexts=[];secNames=[];secStart=[];allLines.forEach((l,i)=>{if(/^# \d+\. /.test(l))secStart.push(i);});BL.slice(1).forEach(b=>{secTexts.push([b.header,...b.body]);secNames.push(b.key);});}
+  if(secSel>=secTexts.length)secSel=secTexts.length-1;
+  if(secSel>=0&&secNames[secSel]===CLI_SEC)secSel=-2;
+  renderScript();
 
   const li=(x,k)=>`<li><input type="checkbox" id="ck${k}" aria-label="Fatto"><div><label for="ck${k}">${esc(x.t)}</label>${x.c?`<br><code class="cmd" data-copy="${esc(x.c)}" title="Clicca per copiare">${esc(x.c)}</code>`:''}</div></li>`;
   $('#check').innerHTML=`<h3>Prima di incollare</h3><ol>${result.checklist.pre.map((x,k)=>li(x,'a'+k)).join('')}</ol><h3>Dopo l'incolla</h3><ol>${result.checklist.post.map((x,k)=>li(x,'b'+k)).join('')}</ol>`;
@@ -1742,7 +1873,7 @@ function renderOutput(){
     ${s.cred.length?`<h3>Credenziali</h3><p class="empty">Le vedi solo qui: non finiscono nel riepilogo copiato né nel profilo salvato.</p>${tb(['Voce','Valore'],s.cred.map(c=>[c.k,c.v]))}`:''}`;
 
   $('#docv').innerHTML=docBody();
-  const secName=Object.assign(Object.fromEntries(SECTIONS),{sw:'Interfacce LAN'});
+  const secName=Object.assign(Object.fromEntries(SECTIONS),{sw:'Interfacce LAN',cli:'Comandi personalizzati',edit:'Modifiche a mano'});
   $('#issues').innerHTML=result.issues.length?result.issues.slice().sort((a,b)=>a.lvl===b.lvl?0:a.lvl==='err'?-1:1).map(is=>`<div class="issue ${is.lvl}"><span class="lvl">${is.lvl==='err'?'Errore':'Avviso'}</span><span class="msg">${esc(is.msg)} <span class="meta-line">· ${esc(secName[is.sec]||'')}</span></span><button type="button" data-goto="${esc(is.path)}" data-sec="${is.sec}">Vai</button></div>`).join(''):'<div class="okbox">Tutti i controlli sono passati. Rileggi comunque lo script prima di incollarlo.</div>';
 
   const bySec={};for(const is of result.issues){const k=is.sec==='sw'?'net':is.sec;bySec[k]=bySec[k]==='err'?'err':is.lvl;}
@@ -1751,11 +1882,90 @@ function renderOutput(){
   markInvalid();
 }
 
-let secTexts=[];
-$('#code').addEventListener('click',e=>{const b=e.target.closest('[data-sec]');if(!b||!secTexts[+b.dataset.sec])return;copyText(secTexts[+b.dataset.sec].join('\n')+'\n');b.textContent='Copiata';setTimeout(()=>{b.textContent='Copia sezione';},1500);});
+let secTexts=[],secNames=[],secStart=[],allLines=[],secSel=-1;
+const pad2=i=>String(i+1).padStart(2,'0');
+const CLI_SEC='Comandi personalizzati';
+function cliIdx(){return secNames.indexOf(CLI_SEC);}
+function idxToSel(i){return i===cliIdx()?-2:i;}
+function selToIdx(){if(secSel!==-2)return secSel;const c=cliIdx();return c>=0?c:secTexts.length;}
+const compactL=lines=>state.opts.compact?lines.map(l=>l.trim()).filter(Boolean):lines;
+function paintPre(lines,start){const code=$('#code');code.style.counterReset='ln '+start;code.innerHTML=lines.map(l=>`<span class="l${/^# \d+\. /.test(l)?' sec':''}">${hl(l)||' '}</span>`).join('');}
+function renderScript(){
+  const n=secTexts.length,all=secSel===-1,ed=secSel===-2,ci=cliIdx(),EI=result.edit;
+  const baseN=secNames.map(x=>x.split('(')[0].trim()||x),cutN=baseN.map(x=>x.split(':')[0].trim()||x),shortN=cutN.map((x,i)=>cutN.filter(y=>y===x).length>1?baseN[i]:x);
+  const cliTxt=String(state.cli.text||''),cliLines=cliTxt.trim()?cliTxt.trim().split('\n').length:0;
+  const nEd=Object.keys(state.edits||{}).length;
+  const dot=k=>{if(EI.all)return '';const si=EI.secs[k];return si&&si.conflict?'<span class="mdot err" title="Modificata a mano, in conflitto con il form"></span>':si&&si.edited?'<span class="mdot" title="Modificata a mano"></span>':'';};
+  const allDot=EI.all?(EI.allConflict?'<span class="mdot err" title="Modificato a mano, in conflitto con il form"></span>':'<span class="mdot" title="Modificato a mano"></span>'):(nEd?'<span class="mdot" title="Contiene modifiche a mano"></span>':'');
+  $('#sxnav').innerHTML=`<h4>Sezioni<span>${n}</span></h4><button type="button" class="sxit all" data-sx="-1" aria-current="${all}"><span class="nr" aria-hidden="true">≡</span><span class="lbl">Tutto lo script</span>${allDot}<span class="cnt">${allLines.length}</span></button>`
+    +secNames.map((nm,i)=>{const isC=i===ci;return `<button type="button" class="sxit" data-sx="${isC?-2:i}" aria-current="${isC?ed:secSel===i}"><span class="nr">${pad2(i)}</span><span class="lbl" title="${esc(nm)}">${esc(shortN[i])}</span>${dot(nm)}<span class="cnt">${secTexts[i].length}</span></button>`;}).join('')
+    +(ci<0?`<button type="button" class="sxit add" data-sx="-2" aria-current="${ed}"><span class="nr" aria-hidden="true">+</span><span class="lbl">${cliLines?'Comandi personalizzati':'Aggiungi comandi CLI'}</span>${cliLines?`<span class="cnt">${cliLines}</span>`:''}</button>`:'');
+  const ei=selToIdx();
+  $('#sxprev').disabled=all;$('#sxnext').disabled=ei>=n-1;
+  $('#edwrap').hidden=ed;$('#sxedit').hidden=!ed;
+  const warn=$('#sxwarn'),reset=$('#sxreset');
+  if(ed){
+    warn.hidden=true;reset.hidden=true;
+    $('#sxt').textContent=(ci>=0?pad2(ci)+' · ':'')+'Comandi personalizzati';
+    $('#sxm').textContent=(cliLines?cliLines+' righe · ':'')+'scritti da te, salvati nel profilo';
+    $('#sxcopy').hidden=!cliLines;
+    $('#sxhint').textContent='Entrano nello script nel punto scelto';
+    $('#cliPos').value=['start','prepol','end'].includes(state.cli.pos)?state.cli.pos:'end';
+    const ta=$('#cliText');if(document.activeElement!==ta&&ta.value!==cliTxt)ta.value=cliTxt;
+    return;
+  }
+  const key=all?null:secNames[secSel],si=key&&!EI.all?EI.secs[key]:null;
+  const lines=all?allLines:secTexts[secSel],start=all?0:secStart[secSel];
+  const editable=all||!EI.all;
+  const edited=all?(EI.all||nEd>0):!!(si&&si.edited);
+  const conflict=all?EI.allConflict:!!(si&&si.conflict);
+  $('#sxt').textContent=all?'Tutto lo script':pad2(secSel)+' · '+secNames[secSel];
+  $('#sxm').textContent=(all?`${allLines.length} righe · ${n} sezioni`:`${lines.length} righe · sezione ${secSel+1} di ${n}`)+(edited?' · modificato a mano':'');
+  $('#sxcopy').hidden=all;
+  reset.hidden=!edited;reset.textContent=all?'Ripristina tutto':'Ripristina';
+  let w='';
+  if(!editable)w=`<span>Nella vista "Tutto lo script" hai cambiato i titoli delle sezioni, quindi lo script ora si modifica solo da lì.</span><button type="button" class="tbtn" data-ed="goall">Vai a Tutto lo script</button>`;
+  else if(conflict)w=`<span>Il form ha cambiato ${all?'lo script':'questa sezione'} dopo la tua modifica a mano. Quale versione tieni?</span><button type="button" class="tbtn" data-ed="keep">La mia</button><button type="button" class="tbtn" data-ed="reset">Quella del form</button>`;
+  else if(all&&EI.orphans.length)w=`<span>Modifiche a mano non applicate perché la sezione non c'è più: ${esc(EI.orphans.join(', '))}.</span><button type="button" class="tbtn" data-ed="orph">Scartale</button>`;
+  warn.innerHTML=w;warn.hidden=!w;
+  $('#sxhint').textContent=!editable?'Sola lettura':'Modificabile: le tue modifiche restano anche se cambi il form';
+  const ta=$('#edta');ta.readOnly=!editable;ta.classList.toggle('skip1',!all);
+  ta.setAttribute('aria-label',all?'Script CLI, modificabile':'Sezione '+secNames[secSel]+', modificabile');
+  if(document.activeElement===ta){const v=ta.value.split('\n');paintPre(all?v:[lines[0],...v],start);}
+  else{const v=(all?lines:lines.slice(1)).join('\n');if(ta.value!==v)ta.value=v;paintPre(lines,start);}
+}
+function commitSec(k,v){const si=result.edit.secs[k];if(!si)return;const t=trimB(v.split('\n')).join('\n');const ex=state.edits[k];if(t===si.gen)delete state.edits[k];else state.edits[k]={base:ex?ex.base:si.gen,text:t};}
+function commitAll(v){
+  const EI=result.edit,lines=trimB(v.split('\n')),bl=splitBlocks(lines),keys=bl.map(b=>b.key),old=state.edits||{};
+  const same=keys.length===EI.order.length&&keys.every((k,i)=>k===EI.order[i]);
+  if(!same){state.edits={__all__:{base:old.__all__?old.__all__.base:EI.genAll,text:lines.join('\n')}};return;}
+  const ne={};bl.forEach(b=>{const si=EI.secs[b.key],t=b.body.join('\n');if(t!==si.gen)ne[b.key]={base:old[b.key]?old[b.key].base:si.gen,text:t};});
+  state.edits=ne;
+}
+function pickSec(i,scroll){secSel=i;renderScript();$('#sxbody').scrollTop=0;$('#sxbody').scrollLeft=0;if(scroll){const nav=$('#sxnav'),b=nav.querySelector('[aria-current="true"]');if(b){if(b.offsetTop<nav.scrollTop)nav.scrollTop=b.offsetTop-8;else if(b.offsetTop+b.offsetHeight>nav.scrollTop+nav.clientHeight)nav.scrollTop=b.offsetTop+b.offsetHeight-nav.clientHeight+8;if(b.offsetLeft<nav.scrollLeft||b.offsetLeft+b.offsetWidth>nav.scrollLeft+nav.clientWidth)nav.scrollLeft=b.offsetLeft-8;}}}
+$('#sxnav').addEventListener('click',e=>{const b=e.target.closest('[data-sx]');if(b)pickSec(+b.dataset.sx,false);});
+$('#sxprev').addEventListener('click',()=>{if(secSel===-1)return;const i=selToIdx()-1;pickSec(i<0?-1:idxToSel(i),true);});
+$('#sxnext').addEventListener('click',()=>{const i=selToIdx()+1;if(i<secTexts.length)pickSec(idxToSel(i),true);});
+$('#cliText').addEventListener('input',e=>{state.cli.text=e.target.value;changed();});
+$('#cliPos').addEventListener('change',e=>{state.cli.pos=e.target.value;changed();});
+$('#edta').addEventListener('input',()=>{
+  const ta=$('#edta');if(ta.readOnly)return;const v=ta.value;
+  if(secSel===-1){paintPre(v.split('\n'),0);commitAll(v);}
+  else if(secSel>=0){if(result.edit.all)return;paintPre([secTexts[secSel][0],...v.split('\n')],secStart[secSel]);commitSec(secNames[secSel],v);}
+  changed();
+});
+function editsChanged(){save();renderOutput();}
+$('#sxreset').addEventListener('click',()=>{if(secSel===-1){if(!confirm('Annullare tutte le modifiche a mano e tornare allo script generato dal form?'))return;state.edits={};}else if(secSel>=0)delete state.edits[secNames[secSel]];editsChanged();});
+$('#sxwarn').addEventListener('click',e=>{const b=e.target.closest('[data-ed]');if(!b)return;const a=b.dataset.ed,EI=result.edit;
+  if(a==='goall'){pickSec(-1,true);return;}
+  if(a==='orph'){EI.orphans.forEach(k=>delete state.edits[k]);}
+  else if(secSel===-1&&EI.all){if(a==='keep')state.edits.__all__.base=EI.genAll;else state.edits={};}
+  else if(secSel>=0){const k=secNames[secSel];if(a==='keep'&&state.edits[k])state.edits[k].base=EI.secs[k].gen;else if(a==='reset')delete state.edits[k];}
+  editsChanged();});
+$('#sxcopy').addEventListener('click',e=>{const b=e.currentTarget;let t='';if(secSel===-2){const c=cliIdx();t=c>=0?compactL(secTexts[c]).join('\n'):String(state.cli.text||'').trim();}else if(secSel>=0&&secTexts[secSel])t=compactL(secTexts[secSel]).join('\n');if(!t)return;copyText(t+'\n');b.textContent='Copiata';setTimeout(()=>{b.textContent='Copia sezione';},1500);});
 function renderActs(){
   const a=$('#outact');
-  if(tab==='script')a.innerHTML=`<button class="tbtn go" data-out="copy-script">Copia script</button>${framed?'':'<button class="tbtn" data-out="dl-script">Scarica .txt</button>'}<span class="flash" id="flash" aria-live="polite"></span>`;
+  if(tab==='script')a.innerHTML=`<button class="tbtn" data-out="copy-script">Copia tutto lo script</button>${framed?'':'<button class="tbtn" data-out="dl-script">Scarica .txt</button>'}<span class="flash" id="flash" aria-live="polite"></span>`;
   else if(tab==='sum')a.innerHTML=`<button class="tbtn go" data-out="copy-sum">Copia riepilogo (Markdown)</button><span class="flash" id="flash" aria-live="polite"></span>`;
   else if(tab==='doc')a.innerHTML=`<button class="tbtn go" data-out="copy-doc">Copia per Word</button>${framed?'<span class="meta-line">Scarica e stampa dalla versione su GitHub Pages</span>':'<button class="tbtn" data-out="dl-doc">Scarica Word</button><button class="tbtn" data-out="print-doc">Stampa / PDF</button>'}<span class="flash" id="flash" aria-live="polite"></span>`;
   else if(tab==='check')a.innerHTML=`<button class="tbtn" data-out="copy-check">Copia checklist</button><span class="flash" id="flash" aria-live="polite"></span>`;
@@ -1987,7 +2197,7 @@ $('#outact').addEventListener('click',e=>{const b=e.target.closest('[data-out]')
 });
 $('#check').addEventListener('click',e=>{const c=e.target.closest('[data-copy]');if(c)copyText(c.dataset.copy);});
 $('#check').addEventListener('change',e=>{if(e.target.type==='checkbox')e.target.closest('li').classList.toggle('done',e.target.checked);});
-$('#issues').addEventListener('click',e=>{const b=e.target.closest('[data-goto]');if(!b)return;const p=b.dataset.goto;const el=p?document.getElementById(idOf(p)):null;if(el){el.scrollIntoView({block:'center'});el.focus({preventScroll:true});}else{const s=document.getElementById('sec-'+(b.dataset.sec==='sw'?'net':b.dataset.sec));if(s)s.scrollIntoView({block:'start'});}});
+$('#issues').addEventListener('click',e=>{const b=e.target.closest('[data-goto]');if(!b)return;if(b.dataset.sec==='edit'){$('#tabs [data-tab="script"]').click();const k=(b.dataset.goto||'').slice(5),i=secNames.indexOf(k);pickSec(i>=0&&!result.edit.all?i:-1,true);return;}if(b.dataset.sec==='cli'){$('#tabs [data-tab="script"]').click();pickSec(-2,true);$('#cliText').focus();return;}const p=b.dataset.goto;const el=p?document.getElementById(idOf(p)):null;if(el){el.scrollIntoView({block:'center'});el.focus({preventScroll:true});}else{const s=document.getElementById('sec-'+(b.dataset.sec==='sw'?'net':b.dataset.sec));if(s)s.scrollIntoView({block:'start'});}});
 
 $('#exSel').addEventListener('change',e=>{const v=e.target.value;if(!v)return;state=withAdmin(v==='vpn'?exampleVpn():example());save();setCur(null);renderAll();e.target.value='';});
 function renderAll(){renderOutput();renderForm();renderProfiles();}
